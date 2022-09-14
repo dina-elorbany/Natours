@@ -9,12 +9,15 @@
   @include clearfix;
 
   [class^='col-'] {
-    height: 5rem;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
   }
 }

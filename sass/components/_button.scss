@@ -6,7 +6,7 @@
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
 
     transition: all 0.2s;
 
@@ -56,5 +56,42 @@
     z-index: -1;
 
     transition: all 0.4s;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    display: inline-block;
+    text-decoration: none;
+
+    padding: 0.3rem 0.6rem;
+    border-bottom: 0.2rem solid;
+    border-image-slice: 1;
+    border-image-source: $gradient-to-light;
+    border-radius: 0.3rem;
+
+    transition: all 0.2s;
+
+    &:not(:hover) {
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: $gradient-to-light;
+      color: transparent;
+    }
+  }
+
+  &:hover {
+    border-bottom: none;
+    color: $color-white;
+    background-image: $gradient-to-light;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
   }
 }
