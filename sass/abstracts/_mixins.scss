@@ -5,3 +5,22 @@
     display: table;
   }
 }
+
+@mixin green-section-background($img) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url($img);
+  background-size: cover;
+  background-position: top;
+}
+
+@mixin gradient-font-to-dark {
+  display: inline-block;
+  background-image: $gradient-to-dark;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
