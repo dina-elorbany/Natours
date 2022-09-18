@@ -6,11 +6,11 @@
   }
 }
 
-@mixin green-section-background($img) {
+@mixin gradient-background-image($light-color, $dark-color, $alpha, $img) {
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
+      rgba($light-color, $alpha),
+      rgba($dark-color, $alpha)
     ),
     url($img);
   background-size: cover;
@@ -19,7 +19,7 @@
 
 @mixin gradient-font-to-dark {
   display: inline-block;
-  background-image: $gradient-to-dark;
+  background-image: $primary-to-right-light;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

@@ -6,15 +6,27 @@
 
 .section-features {
   padding: 20rem 0;
-  @include green-section-background('../../img/nat-4.jpg');
+  @include gradient-background-image(
+    $color-primary-light,
+    $color-primary-dark,
+    0.8,
+    '../../img/nat-4.jpg'
+  );
 
   // Using polygon
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
-  transform: translateY(-15%);
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+  margin-top: -12rem;
 
   // Using skew and translate
   // transform: skewY(-5deg) translateY(-10rem); //jonas used (7deg) and margin
   // & > * {
   //   transform: skewY(5deg);
   // }
+}
+
+.section-tours {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0 50rem;
+  margin-top: -12rem;
 }
