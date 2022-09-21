@@ -17,9 +17,17 @@
   background-position: top;
 }
 
+@mixin gradient-background-to-right-bottom($light-color, $dark-color, $alpha) {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($light-color, $alpha),
+    rgba($dark-color, $alpha)
+  );
+}
+
 @mixin gradient-font-to-dark {
   display: inline-block;
-  background-image: $primary-to-right-light;
+  background-image: $primary-to-right-dark;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

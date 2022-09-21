@@ -121,26 +121,26 @@
     -webkit-box-decoration-break: clone;
 
     &--1 {
-      background-image: linear-gradient(
-        to right,
-        rgba($color-secondary-light, 0.85),
-        rgba($color-secondary-dark, 0.85)
+      @include gradient-background-to-right-bottom(
+        $color-secondary-light,
+        $color-secondary-dark,
+        0.85
       );
     }
 
     &--2 {
-      background-image: linear-gradient(
-        to right,
-        rgba($color-primary-light, 0.85),
-        rgba($color-primary-dark, 0.85)
+      @include gradient-background-to-right-bottom(
+        $color-primary-light,
+        $color-primary-dark,
+        0.85
       );
     }
 
     &--3 {
-      background-image: linear-gradient(
-        to right,
-        rgba($color-tertiary-light, 0.85),
-        rgba($color-tertiary-dark, 0.85)
+      @include gradient-background-to-right-bottom(
+        $color-tertiary-light,
+        $color-tertiary-dark,
+        0.85
       );
     }
   }
