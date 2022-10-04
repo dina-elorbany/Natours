@@ -32,3 +32,20 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+@mixin nav-circular-button($diameter, $distance, $z-index) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+  position: fixed;
+  top: $distance;
+  right: $distance;
+  z-index: $z-index;
+}
+
+@mixin center-horizontal-vertical($top) {
+  position: absolute;
+  top: $top;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
