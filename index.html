@@ -56,7 +56,7 @@
     <!-- HEADER -->
     <header class="header">
       <div class="header__logo-box">
-        <img src="/img/logo-white.png" alt="logo" class="header__logo" />
+        <img src="img/logo-white.png" alt="logo" class="header__logo" />
       </div>
 
       <div class="header__text-box">
@@ -105,14 +105,22 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 src="img/nat-1-large.jpg"
                 alt="nature1"
                 class="composition__photo composition__photo--p1"
-              /><img
+              />
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 src="img/nat-2-large.jpg"
                 alt="nature2"
                 class="composition__photo composition__photo--p2"
-              /><img
+              />
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                 src="img/nat-3-large.jpg"
                 alt="nature3"
                 class="composition__photo composition__photo--p3"
@@ -302,7 +310,9 @@
           <div class="story">
             <figure class="story__shape">
               <img
-                src="img/nat-8.jpg"
+                srcset="img/nat-8.jpg 600w, img/nat-8-large.jpg 2000w"
+                sizes="(max-width: 56.25em) 23vw, (max-width: 37.5em) 35vw, 315px"
+                src="img/nat-8-large.jpg"
                 alt="Person on a tour"
                 class="story__image"
               />
@@ -329,7 +339,9 @@
           <div class="story">
             <figure class="story__shape">
               <img
-                src="img/nat-9.jpg"
+                srcset="img/nat-9.jpg 600w, img/nat-9-large.jpg 2000w"
+                sizes="(max-width: 56.25em) 23vw, (max-width: 37.5em) 35vw, 315px"
+                src="img/nat-9-large.jpg"
                 alt="Person on a tour"
                 class="story__image"
               />
@@ -430,12 +442,17 @@
 
       <!-- FOOTER -->
       <footer class="footer">
-        <div class="footer__logo-box u-margin-bottom-l">
-          <img
-            src="/img/logo-green-2x.png"
-            alt="Full logo"
-            class="footer__logo"
-          />
+        <div class="footer__logo-box">
+          <picture class="footer__logo">
+            <source
+              srcset="img/logo-green-small-1x.png 1x, img/logo-green-2x.png 2x"
+              media="(max-width: 37.5em)"
+            />
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="Full logo"
+            />
+          </picture>
         </div>
 
         <div class="row">

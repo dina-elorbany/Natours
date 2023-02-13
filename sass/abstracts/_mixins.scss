@@ -49,3 +49,51 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+
+/*
+0 - 600px:         phone
+600px - 900px:     tablet portrait
+900px - 1200px:    tablet landscape
+1200px - 1800px:   default size where our normal styles apply
+1800px +:          big desktops
+
+Breakpoint argument choices:
+- phone
+- tablet-portait
+- tablet-landscape
+- big-desktop
+
+Order: base + typography > general layout + grid > components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // width < 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-portrait {
+    // width < 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-landscape {
+    // width < 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    // width > 1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
